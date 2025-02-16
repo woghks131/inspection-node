@@ -1,4 +1,7 @@
 exports.isLoggedIn = (req, res, next) => {
+
+    console.log("middlewares isLoggedIn > ", req.isAuthenticated);
+
     if (req.isAuthenticated()) {
         next();
     } else {

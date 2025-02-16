@@ -4,6 +4,7 @@ const User = require('../models/inspection_users');
 
 module.exports = () => {
     passport.serializeUser((user, done) => {    //로그인 할때만 실행
+        console.log("passport serializeUser > ", user);
         done(null, user.user_num);  //null: 에러시 사용, 성공시 user_num 저장
     });
 
